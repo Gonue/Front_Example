@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+            position: relative;
+            transition: left 0.1s linear;ss
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box</div>
+
+    <script>
+        function moveBox(selector, callback) {
+            var box = document.querySelector(selector);
+            var x = box.offsetLeft;
+            var step = 20;
+            var interval = setInterval(function() {
+                x += step;
+                if (x>=500) {
+                    x = 500;
+                    clearInterval(interval);
+                    callback(box);
+                }
+                //if(x>=500 || x<=0) {
+                //    step *= -1;
+                //}
+                box.style.left = x + "px";
+            },100);
+        }
+
+        // -------------------------------------
+
+        moveBox("div.box", function(target) {
+            target.style.backgroundColor = "Red";
+            target.innerHTML = "완료!"
+        });
+        
+    </script>
+</body>
+</html>
