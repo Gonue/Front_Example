@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class ="userForm" action="#">
+        사용자 : <input type="text" name = "user" placeholder="이름을 입력하시오."> </br>
+        <input type="submit" value="전송">
+    </form>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+        $(function(){
+            $('form.userForm').on('submit', function(event){
+                event.preventDefault();
+                console.log("클릭");
+            });   
+        });
+    </script>
+</body>
+</html>
