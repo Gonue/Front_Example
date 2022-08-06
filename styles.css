@@ -5,7 +5,7 @@ body{
     gap: 20px;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: gainsboro;
+    background-color: beige;
 }
 
 canvas {
@@ -25,9 +25,7 @@ body{
 .color-option {
     width:50px;
     height:50px;
-    border-radius: 25px;  /*동그라미*/
     border:5px solid white;
-    transition: transform ease-in-out .3s;
 }
 
 .btns{
@@ -45,4 +43,13 @@ body{
 }
 .color-option:hover{
     transform: scale(1.5);
+}
+#messageBox {
+    border: 3px solid black;
+    width: 400px;
+    height: 700px;
+    background-color: skyblue;
+    border-radius: 15px;
+    
+    
 }

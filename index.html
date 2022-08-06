@@ -12,8 +12,8 @@
         <input id = "color" type="color"/>
         <div
           class="color-option"
-          style="background-color: #1abc9c"
-          data-color="#1abc9c"
+          style="background-color: #100F0F"
+          data-color="#100F0F"
         ></div>
 
         <div
@@ -28,8 +28,8 @@
         ></div>
         <div
           class="color-option"
-          style="background-color: #95a5a6"
-          data-color="#95a5a6"
+          style="background-color: #E2DCC8"
+          data-color="#E2DCC8"
         ></div>
 
     </div>
@@ -62,8 +62,17 @@
         <button id = "destroy-btn">초기화</button>
         <button id = "eraser-btn">지우개</button>
     </div>
+    
     <canvas></canvas>
-
+    <div>
+    <div id="messageBox">-- 상대와 연결되었습니다 --</div>
+    <div class = "msbtn">
+    <input type="text" value="hello world" id="messageInput">
+    <input type="button" value="전송" id="sendBtn">
+  </div>
+</div>
+<script src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script src="app.js"></script>
+    <script src="socket.js"></script>
 </body>
 </html>
